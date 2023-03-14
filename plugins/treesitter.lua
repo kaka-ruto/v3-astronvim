@@ -8,6 +8,6 @@ return {
   {
     "RRethy/nvim-treesitter-endwise",
     after = "nvim-treesitter",
-    init = function() table.insert(astronvim.file_plugins, "nvim-treesitter-endwise") end,
+    event = "User AstroFile",
   },
 }
