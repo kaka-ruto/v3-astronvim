@@ -24,18 +24,17 @@ return {
     ["<leader>co"] = {
       [[:%y+<CR>:silent !echo "Yanked " . line('$') . " lines to clipboard"<CR>]],
       noremap = true,
-      silent = true,
     },
     -- Select whole file contents (like ctrl A)
-    ["<leader>vv"] = { [[ggVG]], noremap = true, silent = true },
+    ["<leader>vv"] = { [[ggVG]], noremap = true },
     -- Ctrl A + paste
-    ["<leader>pp"] = { [[ggVGp]], noremap = true, silent = true },
+    ["<leader>pp"] = { [[ggVGp]], noremap = true },
     -- Copy current file path
-    ["<leader>cd"] = { [[:let @+=expand('%')<CR>]], noremap = true, silent = true },
+    ["<leader>cd"] = { [[:let @+=expand('%')<CR>]], noremap = true },
     -- Copy current file name with extension
-    ["<leader>cf"] = { [[:let @+=expand('%:t')<CR>]], noremap = true, silent = true },
+    ["<leader>cf"] = { [[:let @+=expand('%:t')<CR>]], noremap = true },
     -- Copy current file path with line number
-    ["<leader>cl"] = { [[:let @+=expand('%') . ':' . line('.')<CR>]], noremap = true, silent = true },
+    ["<leader>cl"] = { [[:let @+=expand('%') . ':' . line('.')<CR>]], noremap = true },
     -- Open a file in the same dir as the open buffer
     [",e"] = { [[:e <C-R>=expand("%:h") . "/" <CR>]] },
     -- Split open a file in the same dir as the open buffer
