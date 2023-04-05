@@ -14,4 +14,9 @@ return {
     config = function() require("hop").setup { keys = "etovxqpdygfblzhckisuran" } end,
     event = "User AstroFile",
   },
+  {
+    -- Abbreviation, substitution and coercion
+    "tpope/vim-abolish",
+    event = "User AstroFile",
+  },
 }
