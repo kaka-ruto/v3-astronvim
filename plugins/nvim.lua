@@ -14,9 +14,4 @@ return {
     config = function() require("hop").setup { keys = "etovxqpdygfblzhckisuran" } end,
     event = "User AstroFile",
   },
-  {
-    -- Use % to jump between matching text
-    "andymass/vim-matchup",
-    event = "User AstroFile",
-  },
 }

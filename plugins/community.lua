@@ -22,4 +22,35 @@ return {
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   -- Track programming activity
   { import = "astrocommunity.media.vim-wakatime" },
+  -- Common configuration presets for options, mappings, and autocommands
+  -- Uncomment after a while, I had an error before
+  -- { import = "astrocommunity.motion.mini-basics" },
+  -- a/i textobjects
+  { import = "astrocommunity.motion.mini-ai" },
+  -- Go forward/backward with square brackets
+  { import = "astrocommunity.motion.mini-bracketed" },
+  -- Move line/selection in all directions with Alt + hjkl
+  { import = "astrocommunity.motion.mini-move" },
+  -- Fast and feature-rich surround actions
+  { import = "astrocommunity.motion.mini-surround" },
+  -- Extends vim's % key to highlight, navigate, and operate on sets of matching text
+  { import = "astrocommunity.motion.vim-matchup" },
+  -- Bash language pack
+  { import = "astrocommunity.pack.bash" },
+  -- Json language pack
+  { import = "astrocommunity.pack.json" },
+  -- Lua language pack
+  { import = "astrocommunity.pack.lua" },
+  -- Markdown language pack
+  { import = "astrocommunity.pack.markdown" },
+  -- Tailwind CSS language pack
+  { import = "astrocommunity.pack.tailwindcss" },
+  -- YAML language pack
+  { import = "astrocommunity.pack.yaml" },
+  -- Animate scrolling
+  { import = "astrocommunity.scrolling.mini-animate" },
+  -- Highlight arguments
+  { import = "astrocommunity.syntax.hlargs-nvim" },
+  -- Easy (alignment)
+  { import = "astrocommunity.syntax.vim-easy-align" },
 }
