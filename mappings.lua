@@ -11,7 +11,9 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
@@ -42,6 +44,10 @@ return {
     [",e"] = { [[:e <C-R>=expand("%:h") . "/" <CR>]] },
     -- Split open a file in the same dir as the open buffer
     [",v"] = { [[:vs <C-R>=expand("%:h") . "/" <CR>]] },
+    -- Telescope find in dir
+    ["<leader>fd"] = { [[:Telescope dir find_files<CR>]], noremap = true, silent = true },
+    -- Telescope grep dir
+    ["<leader>gd"] = { [[:Telescope dir live_grep<CR>]], noremap = true, silent = true },
   },
   t = {
     -- setting a mapping to false will disable it
