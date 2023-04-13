@@ -12,8 +12,13 @@ return {
         file_ignore_patterns = {
           "node_modules",
           "git",
-          -- Smart-specific
-          "clients",
+        },
+      },
+      extensions = {
+        dir = {
+          hidden = false,
+          no_ignore = false,
+          show_preview = true,
         },
       },
     })
