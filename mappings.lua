@@ -48,6 +48,17 @@ return {
     ["<leader>fd"] = { [[:Telescope dir find_files<CR>]], noremap = true, silent = true },
     -- Telescope grep dir
     ["<leader>gd"] = { [[:Telescope dir live_grep<CR>]], noremap = true, silent = true },
+    -- Harpoon
+    -- Mark file
+    ["<leader>ha"] = { [[:lua require("harpoon.mark").add_file()<CR>]], noremap = true },
+    -- View marks using harpoon
+    ["<leader>hv"] = { [[:lua require("harpoon.ui").toggle_quick_menu()<CR>]], noremap = true },
+    -- View marks using telescope
+    ["<leader>ht"] = { [[:Telescope harpoon marks<CR>]], noremap = true },
+    -- Next mark
+    ["<leader>hn"] = { [[:lua require("harpoon.ui").nav_next<CR>]], noremap = true },
+    -- Prev mark
+    ["<leader>hp"] = { [[:lua require("harpoon.ui").nav_prev()<CR>]], noremap = true },
   },
   t = {
     -- setting a mapping to false will disable it

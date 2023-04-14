@@ -51,6 +51,6 @@ return {
   { import = "astrocommunity.scrolling.mini-animate" },
   -- Highlight arguments
   { import = "astrocommunity.syntax.hlargs-nvim" },
-  -- Easy (alignment)
+  -- Easy alignment
   { import = "astrocommunity.syntax.vim-easy-align" },
 }

@@ -19,4 +19,9 @@ return {
     "tpope/vim-abolish",
     event = "User AstroFile",
   },
+  {
+    -- Mark a few files you often visit
+    "ThePrimeagen/harpoon",
+    event = "User AstroFile",
+  },
 }
