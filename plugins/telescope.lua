@@ -4,6 +4,8 @@ return {
   dependencies = {
     -- Find files in a dir
     "princejoogie/dir-telescope.nvim",
+    -- So we can customize fzf to find files ignoring filename case
+    "nvim-telescope/telescope-fzf-native.nvim",
   },
   opts = function(_, opts)
     return require("astronvim.utils").extend_tbl(opts, {
@@ -20,6 +22,12 @@ return {
           no_ignore = false,
           show_preview = true,
         },
+        fzf = {
+          fuzzy = true, -- false will only do exact matching
+          override_generic_sorter = true, -- override the generic sorter
+          override_file_sorter = true, -- override the file sorter
+          case_mode = "ignore_case", -- or "ignore_case" or "respect_case", the default case_mode is "smart_case"
+        },
       },
     })
   end,
@@ -28,5 +36,6 @@ return {
     local telescope = require "telescope"
     telescope.load_extension "dir"
     telescope.load_extension "harpoon"
+    telescope.load_extension "fzf"
   end,
 }
