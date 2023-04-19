@@ -26,10 +26,7 @@ return {
     -- Map <Enter> in normal mode to insert a newline character and keep the cursor in normal mode
     ["<CR>"] = { ':call append(".", "")<Bar>normal! j0<CR>', noremap = true, silent = true },
     -- Yank all lines in file
-    ["<leader>co"] = {
-      [[:%y+<CR>:silent !echo "Yanked " . line('$') . " lines to clipboard"<CR>]],
-      noremap = true,
-    },
+    ["<leader>co"] = { [[:%y+ <CR> ]], noremap = true, silent = true },
     -- Select whole file contents (like ctrl A)
     ["<leader>vv"] = { [[ggVG]], noremap = true },
     -- Ctrl A + paste
