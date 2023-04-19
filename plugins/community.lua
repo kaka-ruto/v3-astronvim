@@ -10,8 +10,6 @@ return {
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   -- Increment & decrement numbers with <C-a> & <C-x>
   { import = "astrocommunity.editing-support.dial-nvim" },
-  -- Split and join arguments with gS & gJ
-  { import = "astrocommunity.editing-support.mini-splitjoin" },
   -- Explain regex with gR
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
   -- Rainbow parentheses
