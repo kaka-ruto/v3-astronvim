@@ -41,6 +41,12 @@ return {
     [",e"] = { [[:e <C-R>=expand("%:h") . "/" <CR>]] },
     -- Split open a file in the same dir as the open buffer
     [",v"] = { [[:vs <C-R>=expand("%:h") . "/" <CR>]] },
+    -- Easily switch vim windows
+    ["<C-h>"] = { [[<C-w>h]], noremap = true },
+    ["<C-j>"] = { [[<C-w>j]], noremap = true },
+    ["<C-k>"] = { [[<C-w>k]], noremap = true },
+    ["<C-l>"] = { [[<C-w>l]], noremap = true },
+    ["<C-x>"] = { [[<C-w>x]], noremap = true },
     -- Telescope find in dir
     ["<leader>fd"] = { [[:Telescope dir find_files<CR>]], noremap = true, silent = true },
     -- Telescope grep dir
