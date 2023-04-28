@@ -4,7 +4,6 @@ return {
   {
     -- Autosave files
     "Pocco81/auto-save.nvim",
-    -- https://astronvim.com/nightly/Recipes/custom_plugins#lazy-load-file-related-plugins
     event = "User AstroFile",
   },
   {
@@ -22,6 +21,12 @@ return {
   {
     -- Mark a few files you often visit
     "ThePrimeagen/harpoon",
+    event = "User AstroFile",
+  },
+  {
+    -- Auto-resize vim windows
+    "beauwilliams/focus.nvim",
+    config = function() require("focus").setup() end,
     event = "User AstroFile",
   },
 }
