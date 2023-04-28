@@ -1,5 +1,5 @@
 return {
-  -- You can also add new plugins here as well:
+  -- Add plugins that are more project-specific here
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
   -- {
@@ -9,4 +9,10 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    -- Move to alternate file
+    "rgroli/other.nvim",
+    config = function() require("other-nvim").setup { mappings = { "rails" } } end,
+    event = "User AstroFile",
+  },
 }
