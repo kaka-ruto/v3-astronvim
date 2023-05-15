@@ -19,13 +19,13 @@ return {
           {
             -- (.*) is a folder/file name
             -- %1 is the first folder/file name, %2 is the second folder/file name, and so forth
-            pattern = "gems/holdings/spec/app/units/(.*)/(.*)/(.*)_spec.rb",
-            target = "gems/holdings/app/units/%1/%2/%3.rb",
+            pattern = "gems/(.*)/spec/app/units/(.*)/(.*)/(.*)_spec.rb",
+            target = "gems/%1/app/units/%2/%3/%4.rb",
             context = "rb",
           },
           {
-            pattern = "gems/holdings/app/units/(.*)/(.*)/(.*).rb",
-            target = "gems/holdings/spec/app/units/%1/%2/%3_spec.rb",
+            pattern = "gems/(.*)/app/units/(.*)/(.*)/(.*).rb",
+            target = "gems/%1/spec/app/units/%2/%3/%4_spec.rb",
             context = "spec",
           },
         },
