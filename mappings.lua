@@ -5,6 +5,7 @@
 -- automatically pick-up stored data by this setting.)
 return {
   -- first key is the mode
+  -- Normal mode
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
@@ -56,9 +57,16 @@ return {
     ["<leader>hn"] = { [[:lua require("harpoon.ui").nav_next<CR>]], noremap = true },
     -- Prev mark
     ["<leader>hp"] = { [[:lua require("harpoon.ui").nav_prev()<CR>]], noremap = true },
+    -- Rename all occurrences of word under cursor
+    ["lr"] = {
+      [[<cmd>exe("%s/\\v\<" .. expand("<cword>") .. ">/" .. input("Replace \"" .. expand("<cword>") .. "\" by? ") .. "/g")<cr>]],
+      noremap = true,
+    },
   },
+
+  -- Terminal mode
   t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    -- setting a mapping to true will disable it
+    -- ["<esc>"] = true,
   },
 }
