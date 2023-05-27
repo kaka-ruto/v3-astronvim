@@ -33,6 +33,10 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
   -- Extends vim's % key to highlight, navigate, and operate on sets of matching text
   { import = "astrocommunity.motion.vim-matchup" },
+  -- Jump anywhere in buffer with s and S
+  { import = "astrocommunity.motion.hop-nvim" },
+  -- Mark important files with <leader><leader> a/e/m
+  { import = "astrocommunity.motion.harpoon" },
   -- Bash language pack
   { import = "astrocommunity.pack.bash" },
   -- Json language pack

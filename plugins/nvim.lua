@@ -7,20 +7,8 @@ return {
     event = "User AstroFile",
   },
   {
-    -- Motions to jump anywhere real quick
-    "phaazon/hop.nvim",
-    branch = "v2", -- optional but strongly recommended
-    config = function() require("hop").setup { keys = "etovxqpdygfblzhckisuran" } end,
-    event = "User AstroFile",
-  },
-  {
     -- Abbreviation, substitution and coercion
     "tpope/vim-abolish",
-    event = "User AstroFile",
-  },
-  {
-    -- Mark a few files you often visit
-    "ThePrimeagen/harpoon",
     event = "User AstroFile",
   },
   {
