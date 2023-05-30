@@ -28,6 +28,30 @@ return {
             target = "gems/%1/spec/app/units/%2/%3/%4_spec.rb",
             context = "spec",
           },
+          -- Test to fixtures
+          {
+            pattern = "test/models/(.*)_test.rb",
+            target = "test/fixtures/%1.yml",
+            transformer = "pluralize",
+            context = "fixtures",
+          },
+          {
+            pattern = "test/fixtures/(.*).yml",
+            target = "test/models/%1_test.rb",
+            transformer = "singularize",
+            context = "spec",
+          },
+          -- Gemfile to Gemfile.lock
+          {
+            pattern = "Gemfile",
+            target = "Gemfile.lock",
+            context = "lock",
+          },
+          {
+            pattern = "Gemfile.lock",
+            target = "Gemfile",
+            context = "lock",
+          },
         },
       }
     end,
