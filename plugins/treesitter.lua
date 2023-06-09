@@ -8,9 +8,44 @@ return {
       })
     end,
   },
+  -- Location and syntax-aware text objects
+  {
+    "RRethy/nvim-treesitter-textsubjects",
+    after = "nvim-treesitter",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        textsubjects = {
+          enable = true,
+          prev_selection = ",", -- (Optional) keymap to select the previous selection
+          keymaps = {
+            ["."] = "textsubjects-smart",
+            [";"] = "textsubjects-container-outer",
+            ["i;"] = "textsubjects-container-inner",
+          },
+        },
+      }
+    end,
+  },
+  -- Add end to def, etc
   {
     "RRethy/nvim-treesitter-endwise",
     after = "nvim-treesitter",
-    event = "User AstroFile",
+  },
+  -- Show code context
+  {
+    "romgrk/nvim-treesitter-context",
+    after = "nvim-treesitter",
+  },
+  {
+    -- Better commenting
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    after = "nvim-treesitter",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        context_commentstring = {
+          enable = true,
+        },
+      }
+    end,
   },
 }
