@@ -41,8 +41,6 @@ return {
   { import = "astrocommunity.pack.bash" },
   -- Json language pack
   { import = "astrocommunity.pack.json" },
-  -- Lua language pack
-  { import = "astrocommunity.pack.lua" },
   -- Markdown language pack
   { import = "astrocommunity.pack.markdown" },
   -- Tailwind CSS language pack

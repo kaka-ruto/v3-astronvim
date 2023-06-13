@@ -59,8 +59,14 @@ return {
     ["<leader>hp"] = { [[:lua require("harpoon.ui").nav_prev()<CR>]], noremap = true },
     -- Rename all occurrences of word under cursor
     ["lr"] = {
-      [[<cmd>exe("%s/\\v\<" .. expand("<cword>") .. ">/" .. input("Replace \"" .. expand("<cword>") .. "\" by? ") .. "/g")<cr>]],
-      noremap = true,
+      function()
+        local old_word = vim.fn.expand "<cword>"
+        local new_word = vim.fn.input("Replace " .. old_word .. " by? ", old_word)
+        -- Check if the new_word is different from the old_word and is not empty
+        if new_word ~= old_word and new_word ~= "" then
+          vim.cmd(":%s/\\<" .. old_word .. "\\>/" .. new_word .. "/g")
+        end
+      end,
     },
   },
 
