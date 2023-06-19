@@ -53,6 +53,12 @@ return {
             context = "lock",
           },
         },
+        style = {
+          border = "rounded",
+          seperator = "|",
+          width = 0.8,
+          minHeight = 2,
+        },
       }
     end,
     event = "User AstroFile",

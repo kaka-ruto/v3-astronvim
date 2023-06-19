@@ -15,7 +15,7 @@ return {
   -- Rainbow parentheses
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   -- Split and join blocks of code with space m
-  { import = "astrocommunity.editing-support.treej" },
+  { import = "astrocommunity.editing-support.treesj" },
   -- Preview markdown with :Glow
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   -- Track programming activity
