@@ -35,7 +35,6 @@ return {
     require "plugins.configs.telescope" (...)
     local telescope = require "telescope"
     telescope.load_extension "dir"
-    telescope.load_extension "harpoon"
     telescope.load_extension "fzf"
   end,
 }
