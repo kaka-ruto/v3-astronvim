@@ -61,7 +61,9 @@ return {
         },
       }
     end,
-    event = "User AstroFile",
+    -- Lazy load
+    cmd = { "Other", "OtherSplit", "OtherVSplit" },
+    keys = { { "<leader>a", "<CMD>OtherVSplit<CR>", desc = "Open alternate file in vertical split" } },
   },
 
   {

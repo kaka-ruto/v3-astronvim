@@ -13,7 +13,7 @@ return {
   -- Explain regex with gR
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
   -- Rainbow parentheses
-  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   -- Split and join blocks of code with space m
   { import = "astrocommunity.editing-support.treesj" },
   -- Preview markdown with :Glow
