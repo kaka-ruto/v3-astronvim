@@ -8,6 +8,7 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     colorcolumn = "120", -- sets vim.opt.colorcolumn
+    showtabline = 0, -- sets vim.opt.showtabline, disabling tabs
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
