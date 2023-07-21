@@ -16,6 +16,8 @@ return {
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   -- Split and join blocks of code with space m
   { import = "astrocommunity.editing-support.treesj" },
+  --Add end to if, for, while, etc.
+  { import = "astrocommunity.editing-support.nvim-treesitter-endwise" },
   -- Preview markdown with :Glow
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   -- Track programming activity

@@ -26,11 +26,6 @@ return {
       }
     end,
   },
-  -- Add end to def, etc
-  {
-    "RRethy/nvim-treesitter-endwise",
-    after = "nvim-treesitter",
-  },
   -- Show code context
   {
     "romgrk/nvim-treesitter-context",

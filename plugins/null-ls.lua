@@ -20,21 +20,21 @@ return {
       conditional(
         function(utils)
           return utils.root_has_file "Gemfile"
-              and null_ls.builtins.formatting.rubocop.with {
+              and formatting.rubocop.with {
                 command = "bundle",
-                args = vim.list_extend({ "exec", "rubocop" }, null_ls.builtins.formatting.rubocop._opts.args),
+                args = vim.list_extend({ "exec", "rubocop" }, formatting.rubocop._opts.args),
               }
-              or null_ls.builtins.formatting.rubocop
+              or formatting.rubocop
         end
       ),
       conditional(
         function(utils)
           return utils.root_has_file "Gemfile"
-              and null_ls.builtins.diagnostics.rubocop.with {
+              and diagnostics.rubocop.with {
                 command = "bundle",
                 args = vim.list_extend({ "exec", "rubocop" }, null_ls.builtins.diagnostics.rubocop._opts.args),
               }
-              or null_ls.builtins.diagnostics.rubocop
+              or diagnostics.rubocop
         end
       ),
 
