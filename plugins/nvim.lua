@@ -6,11 +6,11 @@ return {
     "Pocco81/auto-save.nvim",
     event = "User AstroFile",
   },
-  {
-    -- Abbreviation, substitution and coercion
-    "tpope/vim-abolish",
-    event = "User AstroFile",
-  },
+  -- {
+  --   -- Abbreviation, substitution and coercion
+  --   "tpope/vim-abolish",
+  --   event = "User AstroFile",
+  -- },
   {
     -- Auto-resize vim windows
     "beauwilliams/focus.nvim",

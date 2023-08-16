@@ -45,9 +45,6 @@ return {
       -- ERB
       formatting.erb_lint,
       diagnostics.erb_lint,
-
-      -- Markdown
-      diagnostics.markdownlint,
     }
 
     return config -- return final config table

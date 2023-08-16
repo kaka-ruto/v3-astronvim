@@ -58,6 +58,29 @@ return {
         end
       end,
     },
+    -- Create a new file in the current directory, with current buffer contents
+    -- If the immediate directory does not exist, create it
+    -- Switch to the new file
+    ["<leader><leader>cf"] = {
+      function()
+        local full_path = vim.fn.expand "%:p"
+        local short_path = vim.fn.fnamemodify(full_path, ':~:.')
+        local new_file_path = vim.fn.input("Copy paste to new file in: ", short_path)
+
+        if new_file_path ~= "" then
+          local new_file_path_directory = vim.fn.fnamemodify(new_file_path, ':h')
+
+          if vim.fn.isdirectory(new_file_path_directory) == 0 then
+            vim.fn.mkdir(new_file_path_directory, 'p')
+          end
+
+          vim.cmd("w " .. new_file_path)
+          vim.cmd [[normal! ggVGy]]
+          vim.cmd [[normal! G\"0P]]
+          vim.cmd("e " ..new_file_path)
+        end
+      end,
+    },
     -- Neotest
     -- Run nearest test
     ["<leader>tt"] = { [[:lua require("neotest").run.run() <CR>]] },
