@@ -81,16 +81,6 @@ return {
         end
       end,
     },
-    -- Neotest
-    -- Run nearest test
-    ["<leader>tt"] = { [[:lua require("neotest").run.run() <CR>]] },
-    -- Run suite of tests
-    ["<leader>ts"] = { [[:lua require("neotest").run.run(getcwd()) <CR>]] },
-    -- Run current file
-    ["<leader>tf"] = { [[:lua require("neotest").run.run(vim.fn.expand("%")) <CR>]] },
-    -- Run current directory
-    ["<leader>td"] = { [[:lua require("neotest").run.run(vim.fn.expand("%:h")) <CR>]] },
-    -- Run last test?
   },
 
   -- Terminal mode
