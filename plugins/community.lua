@@ -1,6 +1,7 @@
 return {
-  -- Add the community repository of plugin specifications
   "AstroNvim/astrocommunity",
+  -- Add the community repository of plugin specifications
+-- { dir = "/Users/kaka/Code/projects/astrocommunity" },
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
@@ -33,6 +34,20 @@ return {
   { import = "astrocommunity.motion.mini-move" },
   -- Fast and feature-rich surround actions
   { import = "astrocommunity.motion.mini-surround" },
+  {
+      "echasnovski/mini.surround",
+      opts = {
+      mappings = {
+        add = "ms" .. "a", -- Add surrounding in Normal and Visual modes
+        delete = "ms" .. "d", -- Delete surrounding
+        find = "ms" .. "f", -- Find surrounding (to the right)
+        find_left = "ms" .. "F", -- Find surrounding (to the left)
+        highlight = "ms" .. "h", -- Highlight surrounding
+        replace = "ms" .. "r", -- Replace surrounding
+        update_n_lines = "ms" .. "n", -- Update `n_lines`
+      },
+    },
+  },
   -- Extends vim's % key to highlight, navigate, and operate on sets of matching text
   { import = "astrocommunity.motion.vim-matchup" },
   -- Jump anywhere in buffer with s and S
@@ -48,7 +63,7 @@ return {
   -- Tailwind CSS language pack
   { import = "astrocommunity.pack.tailwindcss" },
   -- YAML language pack
-  { import = "astrocommunity.pack.yaml" },
+  -- { import = "astrocommunity.pack.yaml" },
   -- Animate scrolling
   { import = "astrocommunity.scrolling.mini-animate" },
   -- Highlight arguments
