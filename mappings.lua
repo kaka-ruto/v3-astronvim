@@ -22,7 +22,9 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- Save all unsaved buffers
+    ["<leader>w"] = { ":wa<CR>", desc = "Save all" },
     ["q"] = "<Nop>", -- Disable the "recording" mode
     -- Map <Enter> in normal mode to insert a newline character and keep the cursor in normal mode
     ["<CR>"] = { ':call append(".", "")<Bar>normal! j0<CR>', noremap = true, silent = true },
